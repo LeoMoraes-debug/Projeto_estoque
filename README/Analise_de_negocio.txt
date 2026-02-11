@@ -1,0 +1,77 @@
+Aqui eu vou fazer a analise de negocio e a estraturação do codigo 
+
+a ideia aqui é fazer um programa onde pode adicionar coisas ao estoque e analisar a compra de mais em relação a quantidade no estoque e a oferta do produto 
+
+
+
+menu inicial quando abrir o programa abre a interface estoque com as opçoes adicionar item, retirar item, necessidade de compra, gerar estoque aleatorio, visualizar estoque
+
+entrando em adicionar item abre uma nova aba com os campos nome do produto categoria e preço e preço normal para ser preenchido,  depois de ser preenchido esses dados sao adicionados a uma lista com os produtos e sai automaticamente
+  produtos pode ser um objeto, sempre que um objeto produto for criado ele já é adicionado na lista estoque 
+  que pode estar no objeto estoque
+  o metodo adicionar pode estar em produto e ser chamado no obejto estoque estoque
+  no metodo adicionar
+
+entrando na opção retirar item abre o campo nome do produto e quantidade apos colocado esse item é retirado nessas quantidades
+  o metodo retirar pode estar dentro de produto que é chamado em estoque
+  no metodo adicionar
+
+entrando na opção necessidade de compra abre um menu com um campo pedindo nome do produto, e o valor de oferta, aí entra um conta que relaciona a quantidade que tem com o preço da oferta, quanto mais barata a oferta e menor o estoque mais compra, quanto mais caro e maior o estoque menos compra, possivelmente com um grafico
+  o metodo comprar pode estar direto dentro de estoque
+
+entrando na opção vizualizar estoque  abre outra aba mostrando o dataframe do estoque e algum grafico 
+   o metodo mostrar estoque pode estar no obejto estoque
+
+entrando em gerar estoque aleatorio gera um base de dados aleatoria
+  pode existir um gerar estoque mas talvez eu desista de deixar a opção de permitir a dição de todo o estoque
+
+
+
+__mensagens de erro
+  |
+  |_objeto estoque
+    |
+__gerar codigo 
+__objeto produto
+|||_|__codigo principal
+
+
+objeto produto 
+(nome,categoria,quantidade,preço e preço_normal)
+
+  metodos 
+    adicionar_produto
+      um novo objeto da classe produto vai ser criado e ja vai ser colocado em uma lista
+    retirar_produto
+      o objeto vai ser procurado dentro da lista pelo nome e uma quantidad
+
+objeto estoque
+(filial,) 
+
+  metodos 
+    adicionar_produto
+      chama adicionar produto de produtos
+
+    retirar produto
+      chama o retirar produto de produtos
+
+    necessecidade de compra
+      calcula a necessidade compra analisando a quantidade do produto no estoque e o preço da oferta e possivelmente um grafico
+
+    vizualizar estoque 
+      exibe o dataframe com todos os produtos e um grafico tambem 
+
+
+
+objeto gerar estoque
+()
+  metodos
+    gerar estoque
+     nao sei se da pra fazer ele recebendo todas as informações, mas se nao der tambem foda-se
+     dados os nomes e categorias gera quantidades aleatorias de produtos com preços aleatórios tambem
+     e ja adiciona a lista do estoque
+
+objeto mensagens de erro
+ainda vou ter que pensar nisso mas basicamente é uma classe com os varios tipos de mensagem de erro que eu precisar
+ate agora na analise de projeto so lembro de usar uma busca e ele recebe quantidade(erro de busca, erro de valor invalido)
+
